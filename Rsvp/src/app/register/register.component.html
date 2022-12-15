@@ -1,0 +1,29 @@
+<h2>Registration</h2>
+
+<div>
+  <label> FirstPersonName
+    <input type="text" id="" name="" required [(ngModel)]="this.registration.firstPersonName">
+  </label>
+</div>
+<div>
+  <label> IsComming
+    <input type="checkbox" id="" name="isExtraComing" [(ngModel)]="this.registration.isComing">
+  </label>
+</div>
+<div [hidden]="!(this.registration.isComing)">
+  <label> Comment
+    <input type="text" id="" name="" [(ngModel)]="this.registration.comment">
+  </label>
+</div>
+<div [hidden]="!(this.registration.isComing)">
+  <label> +1
+    <input type="checkbox" id="" name="" [(ngModel)]="this.registration.bringAnotherPerson">
+  </label>
+</div>
+<div [hidden]="!(this.registration.bringAnotherPerson)">
+  <label> SecondPersonName
+    <input type="text" id="" name="" [(ngModel)]="this.registration.secondPersonName">
+  </label>
+</div>
+
+<button (click)="this.service.addGuest(this.registration).subscribe()">Add Registration</button>

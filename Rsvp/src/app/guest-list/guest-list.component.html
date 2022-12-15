@@ -1,0 +1,18 @@
+<h2>Guest-list</h2>
+
+<table>
+  <th>FirstPersonName</th>
+  <th>IsComming</th>
+  <th>Comment</th>
+  <th>BringAnotherPerson</th>
+  <th>SecondPersonName</th>
+  <tr *ngFor="let row of this.records">
+    <td>{{row.fields.firstPersonName}}</td>
+    <td>{{row.fields.isComing}}</td>
+    <td>{{row.fields.comment}}</td>
+    <td>{{row.fields.bringAnotherPerson}}</td>
+    <td>{{row.fields.secondPersonName}}</td>
+  </tr>
+</table>
+
+<p>{{countGuests()}}</p>
